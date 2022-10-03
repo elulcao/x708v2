@@ -20,6 +20,21 @@ charged or the capacity is less than 3.0V.
 
 Use `create-bat.service.sh` to create the service to start the `bat.py` script after reboot.
 
+
+```bash
+sudo systemctl status x708-bat.service
+● x708-bat.service - x708 Battery service
+     Loaded: loaded (/lib/systemd/system/x708-bat.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sun 2022-10-02 20:02:18 CDT; 20h ago
+   Main PID: 705 (python)
+      Tasks: 1 (limit: 9046)
+        CPU: 3.627s
+     CGroup: /system.slice/x708-bat.service
+             └─705 /usr/bin/python /home/pi/x708v2/raspberry-pi-os/bat.py
+
+Oct 02 20:02:18 raspberrypi systemd[1]: Started x708 Battery service.
+```
+
 ### fan.py
 
 Monitor the `Raspberrypi` temperature is less than minimum threashold or greater that maximum threashold.
@@ -27,6 +42,20 @@ Notice tha `x708` fan board is `on` by default, no chance to power off, and the 
 the fan speed.
 
 Use `create-fan.service.sh` to create the service to start the `fan.py` script after reboot.
+
+```bash
+sudo systemctl status x708-fan.service
+● x708-fan.service - x708 Fan service
+     Loaded: loaded (/lib/systemd/system/x708-fan.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sun 2022-10-02 20:02:18 CDT; 20h ago
+   Main PID: 706 (python)
+      Tasks: 1 (limit: 9046)
+        CPU: 3min 12.847s
+     CGroup: /system.slice/x708-fan.service
+             └─706 /usr/bin/python /home/pi/x708v2/raspberry-pi-os/fan.py
+
+Oct 02 20:02:18 raspberrypi systemd[1]: Started x708 Fan service.
+```
 
 ### Case power button
 
