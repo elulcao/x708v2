@@ -2,6 +2,8 @@
 
 Forked from https://github.com/geekworm-com/x708v2
 
+ <img src=".assets/x708.jpg" alt="drawing" width="190" align="right"/>
+
 ## Hardware
 
 * Raspberry Pi 4 8GB
