@@ -37,6 +37,23 @@ sudo systemctl status x708-bat.service
 Oct 02 20:02:18 raspberrypi systemd[1]: Started x708 Battery service.
 ```
 
+The bat.py log generated is saved in `x708.log`:
+
+```bash
+tail -f x708v2/raspberry-pi-os/x708.log
+2022-10-09 16:39:24,660 - bat - INFO - Battery capacity:    19%
+2022-10-09 16:39:29,668 - bat - INFO - Battery capacity:    19%
+2022-10-09 16:39:34,676 - bat - INFO - Battery capacity:    19%
+2022-10-09 16:39:39,685 - bat - INFO - Battery capacity:    19%
+2022-10-09 16:39:44,695 - bat - INFO - Battery capacity:    19%
+2022-10-09 16:39:49,700 - bat - INFO - Battery capacity:    19%
+2022-10-09 16:39:54,708 - bat - INFO - Battery capacity:    19%
+2022-10-09 16:39:59,717 - bat - INFO - Battery capacity:    19%
+2022-10-09 16:40:04,724 - bat - INFO - Battery capacity:    19%
+2022-10-09 16:40:09,732 - bat - INFO - Battery capacity:    19%
+2022-10-09 16:40:14,740 - bat - INFO - Battery capacity:    19%
+```
+
 ### fan.py
 
 Monitor the `Raspberrypi` temperature is less than minimum threashold or greater that maximum threashold.
